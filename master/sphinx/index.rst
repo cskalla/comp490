@@ -4,7 +4,7 @@
    contain the root `toctree` directive.
 
 Interactive Mapping of Environmental Disparities in New Orleans
-================================================================
+===================================
 This is a description of this website!
 
 .. toctree::
