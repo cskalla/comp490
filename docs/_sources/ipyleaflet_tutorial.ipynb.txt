@@ -173,6 +173,88 @@
    ]
   },
   {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## GeoJSON"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import os\n",
+    "import json\n",
+    "import random\n",
+    "import requests\n",
+    "\n",
+    "from ipyleaflet import Map, GeoJSON"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "2576c380adc44dc68d29645b94fb602a",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Map(center=[29.9511, -90.0715], controls=(ZoomControl(options=['position', 'zoom_in_text', 'zoom_in_title', 'z…"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    }
+   ],
+   "source": [
+    "\n",
+    "if not os.path.exists('Neighborhood_Statistical_Areas.geojson'):\n",
+    "    url = 'https://opendata.arcgis.com/datasets/e7daa4c977d14e1b9e2fa4d7aff81e59_0.geojson'\n",
+    "    r = requests.get(url)\n",
+    "    with open('Neighborhood_Statistical_Areas.geojson', 'w') as f:\n",
+    "        f.write(r.content.decode(\"utf-8\"))\n",
+    "\n",
+    "with open('Neighborhood_Statistical_Areas.geojson', 'r') as f:\n",
+    "    data = json.load(f)\n",
+    "\n",
+    "def random_color(feature):\n",
+    "    return {\n",
+    "        'color': 'black',\n",
+    "        'fillColor': random.choice(['red', 'yellow', 'green', 'orange']),\n",
+    "    }\n",
+    "\n",
+    "m = Map(center=(29.9511, -90.0715), zoom=11)\n",
+    "\n",
+    "geo_json = GeoJSON(\n",
+    "    data=data,\n",
+    "    style={\n",
+    "        'opacity': 1, 'dashArray': '9', 'fillOpacity': 0.1, 'weight': 1\n",
+    "    },\n",
+    "    hover_style={\n",
+    "        'color': 'white', 'dashArray': '0', 'fillOpacity': 0.5\n",
+    "    },\n",
+    "    style_callback=random_color\n",
+    ")\n",
+    "m.add_layer(geo_json)\n",
+    "\n",
+    "m"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
    "cell_type": "code",
    "execution_count": null,
    "metadata": {},
