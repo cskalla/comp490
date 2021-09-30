@@ -14,7 +14,7 @@ This Project was created for the course Computing for Environmental Science at K
    about_page
    historical_context
    interactive_maps
-   ipyleaflet_practice
+   ipyleaflet_tutorial
    code_documentation
 
 
