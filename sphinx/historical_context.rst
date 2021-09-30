@@ -1,7 +1,6 @@
-Summary
-==========
+Historical Context
+===================
 
-Summary of project.
 
 Section 1
 -----------

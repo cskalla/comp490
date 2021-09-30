@@ -5,13 +5,16 @@
 
 Interactive Mapping of Environmental Disparities in New Orleans
 ================================================================
-This is a description of this website!
+About this project
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
-   summary
+   about_page
+   historical_context
+   interactive_maps
+   code_documentation
 
 
 
