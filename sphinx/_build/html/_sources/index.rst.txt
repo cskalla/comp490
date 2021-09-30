@@ -5,7 +5,7 @@
 
 Interactive Mapping of Environmental Disparities in New Orleans
 ================================================================
-About this project
+This Project was created for the course Computing for Environmental Science at Kalamazoo College.
 
 .. toctree::
    :maxdepth: 2
@@ -14,6 +14,7 @@ About this project
    about_page
    historical_context
    interactive_maps
+   ipyleaflet_tutorial
    code_documentation
 
 
