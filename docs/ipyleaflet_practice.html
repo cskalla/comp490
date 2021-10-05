@@ -296,8 +296,8 @@ div.rendered_html tbody tr:hover {
 <h1>ipyleaflet Tutorial<a class="headerlink" href="#ipyleaflet-Tutorial" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="Generate-a-basic-map:">
 <h2>Generate a basic map:<a class="headerlink" href="#Generate-a-basic-map:" title="Permalink to this headline">¶</a></h2>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -318,11 +318,17 @@ div.rendered_html tbody tr:hover {
 </pre></div>
 </div>
 </div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "da92bb157b1e4a2cad031e54d7b23b03", "version_major": 2, "version_minor": 0}</script></div>
+</div>
 </div>
 <div class="section" id="Adding-a-scale-control">
 <h2>Adding a scale control<a class="headerlink" href="#Adding-a-scale-control" title="Permalink to this headline">¶</a></h2>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -356,11 +362,108 @@ div.rendered_html tbody tr:hover {
 </pre></div>
 </div>
 </div>
-<div class="nboutput docutils container">
+<div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<script type="application/vnd.jupyter.widget-view+json">{"model_id": "f76911f2b5fd4caca0256e50fadaa0f4", "version_major": 2, "version_minor": 0}</script></div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "f95b4ca8fff44acba4e0abeb197e4f89", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+</div>
+<div class="section" id="Adding-a-drop-down-menu">
+<h2>Adding a drop down menu<a class="headerlink" href="#Adding-a-drop-down-menu" title="Permalink to this headline">¶</a></h2>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">#imports</span>
+<span class="sd">from ipyleaflet import Map, basemaps, Marker, WidgetControl, FullScreenControl, basemap_to_tiles</span>
+<span class="sd">import json</span>
+<span class="sd">from ipywidgets import IntSlider, jslink, Dropdown</span>
+<span class="sd">from ipywidgets.embed import embed_data</span>
+
+
+<span class="sd">#enter map parameters</span>
+<span class="sd">center = (29.9511, -90.0715)</span>
+<span class="sd">zoom = 10</span>
+<span class="sd">basemap = basemaps.OpenStreetMap.Mapnik</span>
+<span class="sd">#create map object</span>
+<span class="sd">m = Map(basemap=basemap,center=center, zoom=zoom)</span>
+
+<span class="sd">#add a Marker (a type of Layer control)</span>
+<span class="sd">#marker = Marker(location=center, draggable=True)</span>
+<span class="sd">#m.add_layer(marker);</span>
+
+<span class="sd">#add full screen control</span>
+<span class="sd">m.add_control(FullScreenControl())</span>
+
+<span class="sd">#Add a sliding bar widget (Zoom control)</span>
+<span class="sd">zoom_slider = IntSlider(description=&#39;Zoom level:&#39;, min=0, max=20, value=10)</span>
+<span class="sd">jslink((zoom_slider, &#39;value&#39;), (m, &#39;zoom&#39;))</span>
+<span class="sd">widget_control1 = WidgetControl(widget=zoom_slider, position=&#39;topright&#39;)</span>
+<span class="sd">m.add_control(widget_control1)</span>
+
+<span class="sd">#Add a drop down menu widget</span>
+<span class="sd">dropdown = Dropdown(</span>
+<span class="sd">    #options=[&#39;basemaps.OpenStreetMap.Mapnik&#39;, &#39;basemaps.OpenStreetMap.BlackAndWhite&#39;, &#39;basemaps.OpenStreetMap.HOT&#39;],</span>
+<span class="sd">    options=[&#39;basemaps.OpenStreetMap.Mapnik&#39;,&#39;basemaps.CartoDB.DarkMatter&#39;],</span>
+<span class="sd">    value=&#39;basemaps.OpenStreetMap.Mapnik&#39;,</span>
+<span class="sd">    description=&#39;Basemap:&#39;,</span>
+<span class="sd">    disabled=False,</span>
+<span class="sd">)</span>
+
+<span class="sd">#add layer</span>
+<span class="sd">dark_matter_layer = basemap_to_tiles(basemaps.CartoDB.DarkMatter)</span>
+<span class="sd">m.add_layer(dark_matter_layer)</span>
+
+<span class="sd">all_layers = m.layers</span>
+
+<span class="sd">def on_change(change):</span>
+
+<span class="sd">    if change[&#39;type&#39;] == &#39;change&#39; and change[&#39;name&#39;] == &#39;value&#39;:</span>
+<span class="sd">            print(&quot;yes?&quot;)</span>
+
+<span class="sd">            #m.layers = m.layers[:2]</span>
+<span class="sd">            #print(m.layers)</span>
+
+<span class="sd">            #layer_index = change[&#39;new&#39;]</span>
+<span class="sd">            #m.add_layer(all_layers[layer_index])</span>
+
+<span class="sd">    print(change[&#39;type&#39;])</span>
+<span class="sd">    print(change[&#39;new&#39;])</span>
+<span class="sd">    print(change[&#39;name&#39;])</span>
+<span class="sd">dropdown.observe(on_change)</span>
+
+<span class="sd">widget_control2 = WidgetControl(widget=dropdown, position=&#39;bottomright&#39;)</span>
+<span class="sd">m.add_control(widget_control2)</span>
+
+<span class="sd">#display the map in Jupyter Notebook</span>
+<span class="sd">display(m)</span>
+<span class="sd">&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&#39;\n#imports\nfrom ipyleaflet import Map, basemaps, Marker, WidgetControl, FullScreenControl, basemap_to_tiles\nimport json\nfrom ipywidgets import IntSlider, jslink, Dropdown\nfrom ipywidgets.embed import embed_data\n\n\n#enter map parameters\ncenter = (29.9511, -90.0715)\nzoom = 10\nbasemap = basemaps.OpenStreetMap.Mapnik\n#create map object\nm = Map(basemap=basemap,center=center, zoom=zoom)\n\n#add a Marker (a type of Layer control)\n#marker = Marker(location=center, draggable=True)\n#m.add_layer(marker);\n\n#add full screen control\nm.add_control(FullScreenControl())\n\n#Add a sliding bar widget (Zoom control)\nzoom_slider = IntSlider(description=\&#39;Zoom level:\&#39;, min=0, max=20, value=10)\njslink((zoom_slider, \&#39;value\&#39;), (m, \&#39;zoom\&#39;))\nwidget_control1 = WidgetControl(widget=zoom_slider, position=\&#39;topright\&#39;)\nm.add_control(widget_control1)\n\n#Add a drop down menu widget\ndropdown = Dropdown(\n    #options=[\&#39;basemaps.OpenStreetMap.Mapnik\&#39;, \&#39;basemaps.OpenStreetMap.BlackAndWhite\&#39;, \&#39;basemaps.OpenStreetMap.HOT\&#39;],\n    options=[\&#39;basemaps.OpenStreetMap.Mapnik\&#39;,\&#39;basemaps.CartoDB.DarkMatter\&#39;],\n    value=\&#39;basemaps.OpenStreetMap.Mapnik\&#39;,\n    description=\&#39;Basemap:\&#39;,\n    disabled=False,\n)\n\n#add layer\ndark_matter_layer = basemap_to_tiles(basemaps.CartoDB.DarkMatter)\nm.add_layer(dark_matter_layer)\n\nall_layers = m.layers\n\ndef on_change(change):\n    \n    if change[\&#39;type\&#39;] == \&#39;change\&#39; and change[\&#39;name\&#39;] == \&#39;value\&#39;:\n            print(&#34;yes?&#34;)\n            \n            #m.layers = m.layers[:2] \n            #print(m.layers)\n            \n            #layer_index = change[\&#39;new\&#39;] \n            #m.add_layer(all_layers[layer_index])\n            \n    print(change[\&#39;type\&#39;])\n    print(change[\&#39;new\&#39;]) \n    print(change[\&#39;name\&#39;])\ndropdown.observe(on_change)\n\nwidget_control2 = WidgetControl(widget=dropdown, position=\&#39;bottomright\&#39;)\nm.add_control(widget_control2)\n\n#display the map in Jupyter Notebook\ndisplay(m)\n&#39;
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;all_layers = m.layers[:]</span>
+<span class="sd">print(all_layers)</span>
+<span class="sd">all_layers[1]</span>
+<span class="sd">&quot;&quot;&quot;</span>
+</pre></div>
+</div>
 </div>
 <div class="nboutput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
@@ -368,23 +471,18 @@ div.rendered_html tbody tr:hover {
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&#39;&#34;\nmanager_state = json.dumps(data[\&#39;manager_state\&#39;])\nwidget_views = [json.dumps(view) for view in data[\&#39;view_specs\&#39;]]\nrendered_template = html_template.format(manager_state=manager_state, widget_views=widget_views)\nwith open(\&#39;export.html\&#39;, \&#39;w\&#39;) as fp:\n    fp.write(rendered_template)\n    &#39;
+&#39;all_layers = m.layers[:]\nprint(all_layers)\nall_layers[1]\n&#39;
 </pre></div></div>
 </div>
 </div>
-<div class="section" id="Adding-a-drop-down-menu">
-<h2>Adding a drop down menu<a class="headerlink" href="#Adding-a-drop-down-menu" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="Adding-a-layer-control">
+<h2>Adding a layer control<a class="headerlink" href="#Adding-a-layer-control" title="Permalink to this headline">¶</a></h2>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1">#imports</span>
-<span class="kn">from</span> <span class="nn">ipyleaflet</span> <span class="kn">import</span> <span class="n">Map</span><span class="p">,</span> <span class="n">basemaps</span><span class="p">,</span> <span class="n">Marker</span><span class="p">,</span> <span class="n">WidgetControl</span><span class="p">,</span> <span class="n">FullScreenControl</span>
-<span class="kn">import</span> <span class="nn">json</span>
-<span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">IntSlider</span><span class="p">,</span> <span class="n">jslink</span><span class="p">,</span> <span class="n">Dropdown</span>
-<span class="kn">from</span> <span class="nn">ipywidgets.embed</span> <span class="kn">import</span> <span class="n">embed_data</span>
-
+<span></span><span class="kn">from</span> <span class="nn">ipyleaflet</span> <span class="kn">import</span> <span class="n">Map</span><span class="p">,</span> <span class="n">Marker</span><span class="p">,</span> <span class="n">LayersControl</span><span class="p">,</span> <span class="n">basemaps</span><span class="p">,</span> <span class="n">basemap_to_tiles</span>
 
 <span class="c1">#enter map parameters</span>
 <span class="n">center</span> <span class="o">=</span> <span class="p">(</span><span class="mf">29.9511</span><span class="p">,</span> <span class="o">-</span><span class="mf">90.0715</span><span class="p">)</span>
@@ -393,33 +491,24 @@ div.rendered_html tbody tr:hover {
 <span class="c1">#create map object</span>
 <span class="n">m</span> <span class="o">=</span> <span class="n">Map</span><span class="p">(</span><span class="n">basemap</span><span class="o">=</span><span class="n">basemap</span><span class="p">,</span><span class="n">center</span><span class="o">=</span><span class="n">center</span><span class="p">,</span> <span class="n">zoom</span><span class="o">=</span><span class="n">zoom</span><span class="p">)</span>
 
-<span class="c1">#add a Marker (a type of Layer control)</span>
-<span class="n">marker</span> <span class="o">=</span> <span class="n">Marker</span><span class="p">(</span><span class="n">location</span><span class="o">=</span><span class="n">center</span><span class="p">,</span> <span class="n">draggable</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">m</span><span class="o">.</span><span class="n">add_layer</span><span class="p">(</span><span class="n">marker</span><span class="p">);</span>
+<span class="c1">#marker1 = Marker(name=&#39;marker1&#39;, location=(48, -2))</span>
+<span class="c1">#marker2 = Marker(name=&#39;marker2&#39;, location=(50, 0))</span>
+<span class="c1">#marker3 = Marker(name=&#39;marker3&#39;, location=(52, 2))</span>
+<span class="n">dark_matter_layer</span> <span class="o">=</span> <span class="n">basemap_to_tiles</span><span class="p">(</span><span class="n">basemaps</span><span class="o">.</span><span class="n">CartoDB</span><span class="o">.</span><span class="n">DarkMatter</span><span class="p">)</span>
+<span class="n">m</span><span class="o">.</span><span class="n">add_layer</span><span class="p">(</span><span class="n">dark_matter_layer</span><span class="p">)</span>
 
-<span class="c1">#add full screen control</span>
-<span class="n">m</span><span class="o">.</span><span class="n">add_control</span><span class="p">(</span><span class="n">FullScreenControl</span><span class="p">())</span>
+<span class="n">black_white_layer</span> <span class="o">=</span> <span class="n">basemap_to_tiles</span><span class="p">(</span><span class="n">basemaps</span><span class="o">.</span><span class="n">OpenStreetMap</span><span class="o">.</span><span class="n">BlackAndWhite</span><span class="p">)</span>
+<span class="n">m</span><span class="o">.</span><span class="n">add_layer</span><span class="p">(</span><span class="n">black_white_layer</span><span class="p">)</span>
 
-<span class="c1">#Add a sliding bar widget (Zoom control)</span>
-<span class="n">zoom_slider</span> <span class="o">=</span> <span class="n">IntSlider</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s1">&#39;Zoom level:&#39;</span><span class="p">,</span> <span class="nb">min</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
-<span class="n">jslink</span><span class="p">((</span><span class="n">zoom_slider</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">),</span> <span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="s1">&#39;zoom&#39;</span><span class="p">))</span>
-<span class="n">widget_control1</span> <span class="o">=</span> <span class="n">WidgetControl</span><span class="p">(</span><span class="n">widget</span><span class="o">=</span><span class="n">zoom_slider</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="s1">&#39;topright&#39;</span><span class="p">)</span>
-<span class="n">m</span><span class="o">.</span><span class="n">add_control</span><span class="p">(</span><span class="n">widget_control1</span><span class="p">)</span>
 
-<span class="c1">#Add a drop down menu widget</span>
-<span class="n">dropdown</span> <span class="o">=</span> <span class="n">Dropdown</span><span class="p">(</span>
-    <span class="n">options</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;basemaps.OpenStreetMap.Mapnik&#39;</span><span class="p">,</span> <span class="s1">&#39;basemaps.OpenStreetMap.BlackAndWhite&#39;</span><span class="p">,</span> <span class="s1">&#39;basemaps.OpenStreetMap.HOT&#39;</span><span class="p">],</span>
-    <span class="n">value</span><span class="o">=</span><span class="s1">&#39;basemaps.OpenStreetMap.Mapnik&#39;</span><span class="p">,</span>
-    <span class="n">description</span><span class="o">=</span><span class="s1">&#39;Basemap:&#39;</span><span class="p">,</span>
-    <span class="n">disabled</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-<span class="p">)</span>
-<span class="c1">#jslink((dropdown, &#39;value&#39;), (m, &#39;basemap&#39;))</span>
-<span class="n">widget_control2</span> <span class="o">=</span> <span class="n">WidgetControl</span><span class="p">(</span><span class="n">widget</span><span class="o">=</span><span class="n">dropdown</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="s1">&#39;bottomright&#39;</span><span class="p">)</span>
-<span class="n">m</span><span class="o">.</span><span class="n">add_control</span><span class="p">(</span><span class="n">widget_control2</span><span class="p">)</span>
+<span class="c1">#m.add_layer(marker1)</span>
+<span class="c1">#m.add_layer(marker2)</span>
+<span class="c1">#m.add_layer(marker3)</span>
 
-<span class="c1">#display the map in Jupyter Notebook</span>
-<span class="n">display</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+<span class="n">control</span> <span class="o">=</span> <span class="n">LayersControl</span><span class="p">(</span><span class="n">position</span><span class="o">=</span><span class="s1">&#39;topright&#39;</span><span class="p">)</span>
+<span class="n">m</span><span class="o">.</span><span class="n">add_control</span><span class="p">(</span><span class="n">control</span><span class="p">)</span>
 
+<span class="n">m</span>
 </pre></div>
 </div>
 </div>
@@ -427,7 +516,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<script type="application/vnd.jupyter.widget-view+json">{"model_id": "6dc8123b7d5c44dd909c9d1fcd7735c4", "version_major": 2, "version_minor": 0}</script></div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "440c24cf224b4a9b83880ea88ed10250", "version_major": 2, "version_minor": 0}</script></div>
 </div>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
@@ -456,6 +545,7 @@ div.rendered_html tbody tr:hover {
 <li><a class="reference internal" href="#Generate-a-basic-map:">Generate a basic map:</a></li>
 <li><a class="reference internal" href="#Adding-a-scale-control">Adding a scale control</a></li>
 <li><a class="reference internal" href="#Adding-a-drop-down-menu">Adding a drop down menu</a></li>
+<li><a class="reference internal" href="#Adding-a-layer-control">Adding a layer control</a></li>
 </ul>
 </li>
 </ul>
