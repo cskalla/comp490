@@ -30,7 +30,7 @@ release = '2021'
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ['sphinx.ext.autodoc', 'sphinx.ext.githubpages', 'nbsphinx',
+extensions = ['sphinx.ext.autodoc', 'sphinx.ext.githubpages', 'nbsphinx','jupyter_sphinx', 'sphinx_panels',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -47,6 +47,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
+#panels_add_bootstrap_css = False #don't let panels override themes css?
 html_theme = 'nature'
 
 # Add any paths that contain custom static files (such as style sheets) here,

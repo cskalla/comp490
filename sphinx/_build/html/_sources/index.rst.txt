@@ -11,10 +11,10 @@ This Project was created for the course Computing for Environmental Science at K
    :maxdepth: 2
    :caption: Contents:
 
-   about_page
-   historical_context
+   test
    interactive_maps
    ipyleaflet_practice
+
    code_documentation
 
 
