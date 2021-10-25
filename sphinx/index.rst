@@ -10,7 +10,7 @@ This Project was created for the course Computing for Environmental Science at K
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
-
+   historical_context
    test
    interactive_maps
    ipyleaflet_practice
