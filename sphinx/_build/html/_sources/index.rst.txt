@@ -10,12 +10,14 @@ This Project was created for the course Computing for Environmental Science at K
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
+   
    historical_context
    test
    interactive_maps
    overlay_choropleth_maps
    flood_map
    ipyleaflet_practice
+   Planning_Districts
 
    code_documentation
 
