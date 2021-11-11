@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 
 <html>
@@ -6,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ipyleaflet Practice &#8212; comp490 2021 documentation</title>
-    <link rel="stylesheet" href="_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="_static/thebelab.css" />
@@ -27,31 +26,116 @@
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="&lt;no title&gt;" href="Planning_Districts.html" />
-    <link rel="prev" title="High Water Mark Flood Elevation" href="flood_map.html" /> 
-  </head><body>
-    <div class="related" role="navigation" aria-label="related navigation">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="General Index"
-             accesskey="I">index</a></li>
-        <li class="right" >
-          <a href="Planning_Districts.html" title="&lt;no title&gt;"
-             accesskey="N">next</a> |</li>
-        <li class="right" >
-          <a href="flood_map.html" title="High Water Mark Flood Elevation"
-             accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">comp490 2021 documentation</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">ipyleaflet Practice</a></li> 
-      </ul>
-    </div>  
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="_static/js/jquery-1.12.4.min.js "></script>
+<script type="text/javascript" src="_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="_static/bootstrap-3.4.1/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="_static/bootstrap-sphinx.js "></script>
 
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body" role="main">
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          Comp490 Final Project</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
             
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="historical_context.html">The People of New Orleans</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flooding.html">Flooding and Environmental Disparity in New Orleans</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="flooding.html#geographical-history-of-new-orleans">Geographical History of New Orleans</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flooding.html#overview-of-flooding">Overview of Flooding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flooding.html#coastal-guard">Coastal Guard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flooding.html#the-superdome">The Superdome</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flooding.html#flooding-in-black-communities">Flooding in Black Communities</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="climate.html">Climate Change</a></li>
+<li class="toctree-l1"><a class="reference internal" href="map1.html">A Picture of Inequity: Race, Income, and Flooding</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="map1.html#New-Orleans,-2005">New Orleans, 2005</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="technology_used.html">Technology Used</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test.html">Test</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interactive_maps.html">Interactive Maps</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="interactive_maps.html#section-1">Section 1</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="overlay_choropleth_maps.html">Two layer choropleth maps</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="overlay_choropleth_maps.html#Voting-districts">Voting districts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overlay_choropleth_maps.html#Planning-districts">Planning districts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overlay_choropleth_maps.html#Overlay-the-voting-districts-and-planning-districts-layers">Overlay the voting districts and planning districts layers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overlay_choropleth_maps.html#Remake-chorpleth-map-with-less-lines">Remake chorpleth map with less lines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overlay_choropleth_maps.html#Remake-choropleth-map-with-overlapping-colors">Remake choropleth map with overlapping colors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overlay_choropleth_maps.html#Add-Percent-Black-or-African-American-and-Percent-Units-Flooded-scale-color">Add Percent Black or African American and Percent Units Flooded scale color</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="overlay_choropleth_maps.html#Choropleth-of-socioeconomic-layers">Choropleth of socioeconomic layers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flood_map.html">High Water Mark Flood Elevation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="conclusion.html">A Conclusion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="technology_used.html">Technology Used</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code_documentation.html">Code Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="code_documentation.html#section-1">Section 1</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+              
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="body col-md-12 content" role="main">
+      
   
 <style>
 /* CSS for nbsphinx extension */
@@ -331,7 +415,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<script type="application/vnd.jupyter.widget-view+json">{"model_id": "d2a3af1885124758afd49b46bcd14bf3", "version_major": 2, "version_minor": 0}</script></div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "73f3d0b6c380488c85f7b3d27afb38cc", "version_major": 2, "version_minor": 0}</script></div>
 </div>
 </div>
 <div class="section" id="Adding-a-scale-control">
@@ -375,7 +459,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<script type="application/vnd.jupyter.widget-view+json">{"model_id": "d6f1733fb5354fdf90bd6c88265a7a69", "version_major": 2, "version_minor": 0}</script></div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "3e3e84e1c56a4822bfc12239908eccb7", "version_major": 2, "version_minor": 0}</script></div>
 </div>
 </div>
 <div class="section" id="Adding-a-layer-control">
@@ -422,7 +506,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<script type="application/vnd.jupyter.widget-view+json">{"model_id": "d366844798cb41169537643ca0ed11b4", "version_major": 2, "version_minor": 0}</script></div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "0146a568087144c9a1083645aeeab51a", "version_major": 2, "version_minor": 0}</script></div>
 </div>
 </div>
 <div class="section" id="Basemap-dropdown-menu-(doesn’t-work-as-webpage)">
@@ -488,13 +572,13 @@ div.rendered_html tbody tr:hover {
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<script type="application/vnd.jupyter.widget-view+json">{"model_id": "234636436bb3426bba5a754ca955c30f", "version_major": 2, "version_minor": 0}</script></div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "0f75972d24f14a6895b8cc3b7dfea28c", "version_major": 2, "version_minor": 0}</script></div>
 </div>
 </div>
 <div class="section" id="Choropleth-map-without-the-data">
 <h2>Choropleth map without the data<a class="headerlink" href="#Choropleth-map-without-the-data" title="Permalink to this headline">¶</a></h2>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -567,7 +651,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<script type="application/vnd.jupyter.widget-view+json">{"model_id": "334e8d109c1b4a13a1ed2173293d834b", "version_major": 2, "version_minor": 0}</script></div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "f54077f56b694a509203ee321b9c6efa", "version_major": 2, "version_minor": 0}</script></div>
 </div>
 </div>
 <div class="section" id="Display-a-pop-up-message">
@@ -616,13 +700,13 @@ div.rendered_html tbody tr:hover {
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<script type="application/vnd.jupyter.widget-view+json">{"model_id": "481d12fc3ad04f58817ea4ed136ab76f", "version_major": 2, "version_minor": 0}</script></div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "65be82ce95de487baf3f284725bd33b5", "version_major": 2, "version_minor": 0}</script></div>
 </div>
 </div>
 <div class="section" id="Choropleth-Maps-and-GeoJSON">
 <h2>Choropleth Maps and GeoJSON<a class="headerlink" href="#Choropleth-Maps-and-GeoJSON" title="Permalink to this headline">¶</a></h2>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -861,14 +945,14 @@ div.rendered_html tbody tr:hover {
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<script type="application/vnd.jupyter.widget-view+json">{"model_id": "9701fbe47a9e4a9c803464ccba946c3c", "version_major": 2, "version_minor": 0}</script></div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "fa584aca75c44c7e9ebe2e8e2d9b1578", "version_major": 2, "version_minor": 0}</script></div>
 </div>
 </div>
 </div>
 <div class="section" id="Choropleth-map-of-percentage-of-Black-or-African-American-population-by-voting-district">
 <h2>Choropleth map of percentage of Black or African American population by voting district<a class="headerlink" href="#Choropleth-map-of-percentage-of-Black-or-African-American-population-by-voting-district" title="Permalink to this headline">¶</a></h2>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -899,7 +983,7 @@ div.rendered_html tbody tr:hover {
 </div>
 </div>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -909,7 +993,7 @@ div.rendered_html tbody tr:hover {
 </div>
 </div>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -920,7 +1004,7 @@ div.rendered_html tbody tr:hover {
 </div>
 </div>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -936,7 +1020,7 @@ div.rendered_html tbody tr:hover {
 </div>
 </div>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -945,7 +1029,7 @@ div.rendered_html tbody tr:hover {
 </div>
 </div>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -955,7 +1039,7 @@ div.rendered_html tbody tr:hover {
 </div>
 </div>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -977,7 +1061,7 @@ div.rendered_html tbody tr:hover {
 <div class="section" id="Population-Percentage-Black-or-African-American">
 <h3>Population Percentage Black or African American<a class="headerlink" href="#Population-Percentage-Black-or-African-American" title="Permalink to this headline">¶</a></h3>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[25]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -989,14 +1073,14 @@ div.rendered_html tbody tr:hover {
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<script type="application/vnd.jupyter.widget-view+json">{"model_id": "2ad172878e28463291f134c1a97836ed", "version_major": 2, "version_minor": 0}</script></div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "afcab0ebd6444acfaf9818c90aa24845", "version_major": 2, "version_minor": 0}</script></div>
 </div>
 </div>
 </div>
 <div class="section" id="Plotting-Flood-Levels">
 <h2>Plotting Flood Levels<a class="headerlink" href="#Plotting-Flood-Levels" title="Permalink to this headline">¶</a></h2>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -1044,7 +1128,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<script type="application/vnd.jupyter.widget-view+json">{"model_id": "e235cb019db64214bd5dc4b2933548b2", "version_major": 2, "version_minor": 0}</script></div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "bf1e2af8868749c9bd1b627dc783b18b", "version_major": 2, "version_minor": 0}</script></div>
 </div>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
@@ -1061,80 +1145,28 @@ div.rendered_html tbody tr:hover {
 </div>
 
 
-            <div class="clearer"></div>
-          </div>
-        </div>
-      </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">ipyleaflet Practice</a><ul>
-<li><a class="reference internal" href="#Generate-a-basic-map:">Generate a basic map:</a></li>
-<li><a class="reference internal" href="#Adding-a-scale-control">Adding a scale control</a></li>
-<li><a class="reference internal" href="#Adding-a-layer-control">Adding a layer control</a></li>
-<li><a class="reference internal" href="#Basemap-dropdown-menu-(doesn’t-work-as-webpage)">Basemap dropdown menu (doesn’t work as webpage)</a></li>
-<li><a class="reference internal" href="#Choropleth-map-without-the-data">Choropleth map without the data</a></li>
-<li><a class="reference internal" href="#Display-a-pop-up-message">Display a pop up message</a></li>
-<li><a class="reference internal" href="#Choropleth-Maps-and-GeoJSON">Choropleth Maps and GeoJSON</a><ul>
-<li><a class="reference internal" href="#Average-household-income-2015-2019">Average household income 2015-2019</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#Choropleth-map-of-percentage-of-Black-or-African-American-population-by-voting-district">Choropleth map of percentage of Black or African American population by voting district</a><ul>
-<li><a class="reference internal" href="#Population-Percentage-Black-or-African-American">Population Percentage Black or African American</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#Plotting-Flood-Levels">Plotting Flood Levels</a></li>
-</ul>
-</li>
-</ul>
-
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="flood_map.html"
-                        title="previous chapter">High Water Mark Flood Elevation</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="Planning_Districts.html"
-                        title="next chapter">&lt;no title&gt;</a></p>
-  <div role="note" aria-label="source link">
-    <h3>This Page</h3>
-    <ul class="this-page-menu">
-      <li><a href="_sources/ipyleaflet_practice.ipynb.txt"
-            rel="nofollow">Show Source</a></li>
-    </ul>
-   </div>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="Go" />
-    </form>
     </div>
+      
+  </div>
 </div>
-<script>$('#searchbox').show(0);</script>
-        </div>
-      </div>
-      <div class="clearer"></div>
-    </div>
-    <div class="related" role="navigation" aria-label="related navigation">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="General Index"
-             >index</a></li>
-        <li class="right" >
-          <a href="Planning_Districts.html" title="&lt;no title&gt;"
-             >next</a> |</li>
-        <li class="right" >
-          <a href="flood_map.html" title="High Water Mark Flood Elevation"
-             >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">comp490 2021 documentation</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">ipyleaflet Practice</a></li> 
-      </ul>
-    </div>
-    <div class="footer" role="contentinfo">
-        &#169; Copyright 2021, CS.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
-    </div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+<div id="sourcelink">
+  <a href="_sources/ipyleaflet_practice.ipynb.txt"
+     rel="nofollow">Source</a>
+</div>
+      
+    </p>
+    <p>
+        &copy; Copyright 2021, CS.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.2.1.<br/>
+    </p>
+  </div>
+</footer>
   </body>
 </html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A Conclusion &#8212; comp490 2021 documentation</title>
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/jupyter-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="_static/thebelab.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/thebelab-helper.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "tex2jax_ignore|mathjax_ignore|document", "processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Bibliography" href="bibliography.html" />
+    <link rel="prev" title="High Water Mark Flood Elevation" href="flood_map.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="_static/js/jquery-1.12.4.min.js "></script>
+<script type="text/javascript" src="_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="_static/bootstrap-3.4.1/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          Comp490 Final Project</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="historical_context.html">The People of New Orleans</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flooding.html">Flooding and Environmental Disparity in New Orleans</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="flooding.html#geographical-history-of-new-orleans">Geographical History of New Orleans</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flooding.html#overview-of-flooding">Overview of Flooding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flooding.html#coastal-guard">Coastal Guard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flooding.html#the-superdome">The Superdome</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flooding.html#flooding-in-black-communities">Flooding in Black Communities</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="climate.html">Climate Change</a></li>
+<li class="toctree-l1"><a class="reference internal" href="map1.html">A Picture of Inequity: Race, Income, and Flooding</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="map1.html#New-Orleans,-2005">New Orleans, 2005</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="technology_used.html">Technology Used</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test.html">Test</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interactive_maps.html">Interactive Maps</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="interactive_maps.html#section-1">Section 1</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="overlay_choropleth_maps.html">Two layer choropleth maps</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="overlay_choropleth_maps.html#Voting-districts">Voting districts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overlay_choropleth_maps.html#Planning-districts">Planning districts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overlay_choropleth_maps.html#Overlay-the-voting-districts-and-planning-districts-layers">Overlay the voting districts and planning districts layers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overlay_choropleth_maps.html#Remake-chorpleth-map-with-less-lines">Remake chorpleth map with less lines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overlay_choropleth_maps.html#Remake-choropleth-map-with-overlapping-colors">Remake choropleth map with overlapping colors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overlay_choropleth_maps.html#Add-Percent-Black-or-African-American-and-Percent-Units-Flooded-scale-color">Add Percent Black or African American and Percent Units Flooded scale color</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="overlay_choropleth_maps.html#Choropleth-of-socioeconomic-layers">Choropleth of socioeconomic layers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flood_map.html">High Water Mark Flood Elevation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">A Conclusion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="technology_used.html">Technology Used</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code_documentation.html">Code Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="code_documentation.html#section-1">Section 1</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="flood_map.html" title="Previous Chapter: High Water Mark Flood Elevation"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; High Water Ma...</span>
+    </a>
+  </li>
+  <li>
+    <a href="bibliography.html" title="Next Chapter: Bibliography"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Bibliography &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="body col-md-12 content" role="main">
+      
+  <div class="section" id="a-conclusion">
+<h1>A Conclusion<a class="headerlink" href="#a-conclusion" title="Permalink to this headline">¶</a></h1>
+<p>After researching and creating these maps, a clear conclusion can be made. The map that depicts the percentage of the population that is Black overlaid with the percentage of units flooded during Hurricane Katrina demonstrates a climate event that disproportionately impacted a vulnerable population. Situations such as these should be addressed, as we have seen how much this catastrophe has impacted the communities of New Orleans, specifically the Black community. Even to this day, many have not recovered mentally and physically. Looking back at the events that had unfolded, there were many ways the government could have handled the situation. To be better prepared, it is important we acknowledge our shortcomings and try to fix them. With these maps, it helps us understand which locations need more attention and care, should events such as these happen again.
+As a whole, this is only one city with one climate issue. What is to be said for the rest of the world that we live in? Research like this should be continued in similar ways. Compiling data at a larger scale could be important. This could include entire states, the United States, or ideally continents. This would provide a way to figure out where the disparities are occurring. Climate data to be researched and overlay demographic data could include, but is not limited to, fires, floods, water contamination, soil contamination, and temperature. Hopefully maps such as these here can be made accessible and understandable to our population for better education on how the changing climate is unequally impacting people’s lives.</p>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+<div id="sourcelink">
+  <a href="_sources/conclusion.rst.txt"
+     rel="nofollow">Source</a>
+</div>
+      
+    </p>
+    <p>
+        &copy; Copyright 2021, CS.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.2.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
