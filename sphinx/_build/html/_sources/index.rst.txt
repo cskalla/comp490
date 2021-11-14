@@ -15,20 +15,12 @@ This Project was created for the course Computing for Environmental Science at K
 
    historical_context
    flooding
+   race+flooding
+   income+flooding
    climate
-   map1
-   technology_used
-   test
-   interactive_maps
-   overlay_choropleth_maps
-   flood_map
    conclusion
    technology_used
    bibliography
-
-   Planning_Districts
-
-   code_documentation
 
 .. panels::
 
