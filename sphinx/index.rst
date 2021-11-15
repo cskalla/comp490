@@ -13,14 +13,15 @@ This Project was created for the course Computing for Environmental Science at K
    :caption: Contents:
 
 
-   historical_context
+   Historical_Map
    flooding
-   race+flooding
-   income+flooding
+   Race+Flooding3
+   Income+Flooding2
    climate
    conclusion
-   technology_used
+   technology_usesd
    bibliography
+
 
 .. panels::
 
@@ -39,6 +40,14 @@ This Project was created for the course Computing for Environmental Science at K
        ^^^^^^^^^^^^^^
 
        :ref:`The People of New Orleans`
+
+       :ref:`Flooding and Environmental Disparity in New Orleans`
+
+       :ref:`Interactive Mapping: Income and Flooding`
+
+       :ref:`Climate Change`
+
+       :ref:`A Conclusion`
 
        :ref:`Technology Used`
 

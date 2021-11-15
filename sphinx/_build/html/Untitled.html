@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>&lt;no title&gt; &#8212; comp490 2021 documentation</title>
+    <title>Interactive Mapping: Income and Flooding &#8212; comp490 2021 documentation</title>
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/jupyter-sphinx.css" />
@@ -65,7 +65,10 @@
       role="menu"
       aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Contents:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="historical_context.html">The People of New Orleans</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Historical_Map.html">The People of New Orleans</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Historical_Map.html#Historical-Map-of-New-Orleans">Historical Map of New Orleans</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="flooding.html">Flooding and Environmental Disparity in New Orleans</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="flooding.html#geographical-history-of-new-orleans">Geographical History of New Orleans</a></li>
 <li class="toctree-l2"><a class="reference internal" href="flooding.html#overview-of-flooding">Overview of Flooding</a></li>
@@ -75,17 +78,24 @@
 <li class="toctree-l2"><a class="reference internal" href="flooding.html#flooding-in-black-communities">Flooding in Black Communities</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="race%2Bflooding.html">Interactive Mapping: Race and Flooding</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="race%2Bflooding.html#id1">Interactive Mapping: Race and Flooding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Race%2BFlooding3.html">Interactive Mapping: Race and Flooding</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Race%2BFlooding3.html#Race-and-Flooding-Layered-Choropleth-Map">Race and Flooding Layered Choropleth Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Race%2BFlooding3.html#How-to-interact:">How to interact:</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="income%2Bflooding.html">Interactive Mapping: Income and Flooding</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="income%2Bflooding.html#id1">Interactive Mapping: Income and Flooding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Income%2BFlooding2.html">Interactive Mapping: Income and Flooding</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Income%2BFlooding2.html#Income-and-Flooding-Layered-Choropleth-Map">Income and Flooding Layered Choropleth Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Income%2BFlooding2.html#Description">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Income%2BFlooding2.html#How-to-interact:">How to interact:</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="climate.html">Climate Change</a></li>
 <li class="toctree-l1"><a class="reference internal" href="conclusion.html">A Conclusion</a></li>
-<li class="toctree-l1"><a class="reference internal" href="technology_used.html">Technology Used</a></li>
+<li class="toctree-l1"><a class="reference internal" href="technology_usesd.html">Technology Used</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="technology_usesd.html#maps">Maps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="technology_usesd.html#website">Website</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
 </ul>
 </ul>
@@ -368,371 +378,10 @@ div.rendered_html tbody tr:hover {
   background: rgba(66, 165, 245, 0.2);
 }
 </style>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">import</span> <span class="nn">json</span>
-<span class="kn">import</span> <span class="nn">random</span>
-<span class="kn">import</span> <span class="nn">requests</span>
-<span class="kn">import</span> <span class="nn">random</span>
-
-<span class="kn">from</span> <span class="nn">ipyleaflet</span> <span class="kn">import</span> <span class="n">Map</span><span class="p">,</span> <span class="n">GeoJSON</span>
-
-<span class="kn">import</span> <span class="nn">ipyleaflet</span>
-<span class="kn">import</span> <span class="nn">json</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">import</span> <span class="nn">requests</span>
-<span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">link</span><span class="p">,</span> <span class="n">FloatSlider</span><span class="p">,</span> <span class="n">HTML</span>
-<span class="kn">from</span> <span class="nn">branca.colormap</span> <span class="kn">import</span> <span class="n">linear</span>
-<span class="kn">from</span> <span class="nn">ipyleaflet</span> <span class="kn">import</span> <span class="n">Choropleth</span><span class="p">,</span> <span class="n">Map</span><span class="p">,</span> <span class="n">Popup</span><span class="p">,</span> <span class="n">basemaps</span>
-
-<span class="c1">#Make percent African American or Black by voting district layer</span>
-<span class="c1">#load in demographic data from csv file</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;DECENNIALPL2020.P1_data_with_overlays_2021-10-05T211037.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-    <span class="n">race</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-<span class="c1">#clean data</span>
-<span class="c1">#total population</span>
-<span class="n">race</span><span class="p">[</span><span class="s1">&#39;P1_001N&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">race</span><span class="p">[</span><span class="s1">&#39;P1_001N&#39;</span><span class="p">],</span><span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">)</span>
-<span class="c1">#number population black</span>
-<span class="c1">#race[&#39;P1_004N&#39;] = pd.to_numeric(race[&#39;P1_004N&#39;],errors=&#39;coerce&#39;)</span>
-<span class="c1">#percentage black</span>
-<span class="c1">#race[&#39;%_Black&#39;] = race[&#39;P1_004N&#39;]/race[&#39;P1_001N&#39;] *100</span>
-<span class="c1">#race = race.dropna(subset=[&#39;%_Black&#39;], axis = 0)</span>
-<span class="c1">#race = race.join(race[&#39;NAME&#39;].str.split(&#39;,&#39;, 1, expand=True).rename(columns={0:&#39;Precinct_ID&#39;, 1:&#39;B&#39;}))</span>
-
-</pre></div>
-</div>
-</div>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">race</span>
-
-</pre></div>
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
-</pre></div>
-</div>
-<div class="output_area rendered_html docutils container">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>GEO_ID</th>
-      <th>NAME</th>
-      <th>P1_001N</th>
-      <th>P1_002N</th>
-      <th>P1_003N</th>
-      <th>P1_004N</th>
-      <th>P1_005N</th>
-      <th>P1_006N</th>
-      <th>P1_007N</th>
-      <th>P1_008N</th>
-      <th>...</th>
-      <th>P1_062N</th>
-      <th>P1_063N</th>
-      <th>P1_064N</th>
-      <th>P1_065N</th>
-      <th>P1_066N</th>
-      <th>P1_067N</th>
-      <th>P1_068N</th>
-      <th>P1_069N</th>
-      <th>P1_070N</th>
-      <th>P1_071N</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>id</td>
-      <td>Geographic Area Name</td>
-      <td>NaN</td>
-      <td>!!Total:!!Population of one race:</td>
-      <td>!!Total:!!Population of one race:!!White alone</td>
-      <td>!!Total:!!Population of one race:!!Black or A...</td>
-      <td>!!Total:!!Population of one race:!!American I...</td>
-      <td>!!Total:!!Population of one race:!!Asian alone</td>
-      <td>!!Total:!!Population of one race:!!Native Haw...</td>
-      <td>!!Total:!!Population of one race:!!Some Other...</td>
-      <td>...</td>
-      <td>!!Total:!!Population of two or more races:!!P...</td>
-      <td>!!Total:!!Population of two or more races:!!P...</td>
-      <td>!!Total:!!Population of two or more races:!!P...</td>
-      <td>!!Total:!!Population of two or more races:!!P...</td>
-      <td>!!Total:!!Population of two or more races:!!P...</td>
-      <td>!!Total:!!Population of two or more races:!!P...</td>
-      <td>!!Total:!!Population of two or more races:!!P...</td>
-      <td>!!Total:!!Population of two or more races:!!P...</td>
-      <td>!!Total:!!Population of two or more races:!!P...</td>
-      <td>!!Total:!!Population of two or more races:!!P...</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>7000000US220710001-1</td>
-      <td>1-1, Orleans Parish, Louisiana</td>
-      <td>1397.0</td>
-      <td>1258</td>
-      <td>850</td>
-      <td>253</td>
-      <td>4</td>
-      <td>100</td>
-      <td>0</td>
-      <td>51</td>
-      <td>...</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>7000000US220710001-2</td>
-      <td>1-2, Orleans Parish, Louisiana</td>
-      <td>529.0</td>
-      <td>492</td>
-      <td>417</td>
-      <td>44</td>
-      <td>4</td>
-      <td>20</td>
-      <td>0</td>
-      <td>7</td>
-      <td>...</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>7000000US220710001-5</td>
-      <td>1-5, Orleans Parish, Louisiana</td>
-      <td>947.0</td>
-      <td>851</td>
-      <td>689</td>
-      <td>85</td>
-      <td>13</td>
-      <td>19</td>
-      <td>0</td>
-      <td>45</td>
-      <td>...</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>7000000US220710001-6</td>
-      <td>1-6, Orleans Parish, Louisiana</td>
-      <td>891.0</td>
-      <td>828</td>
-      <td>126</td>
-      <td>621</td>
-      <td>9</td>
-      <td>49</td>
-      <td>0</td>
-      <td>23</td>
-      <td>...</td>
-      <td>0</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>348</th>
-      <td>7000000US2207115-19B</td>
-      <td>15-19B, Orleans Parish, Louisiana</td>
-      <td>645.0</td>
-      <td>640</td>
-      <td>15</td>
-      <td>623</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-      <td>...</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>349</th>
-      <td>7000000US2207115-19C</td>
-      <td>15-19C, Orleans Parish, Louisiana</td>
-      <td>1952.0</td>
-      <td>1893</td>
-      <td>52</td>
-      <td>1371</td>
-      <td>2</td>
-      <td>260</td>
-      <td>0</td>
-      <td>208</td>
-      <td>...</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>350</th>
-      <td>7000000US2207117-13A</td>
-      <td>17-13A, Orleans Parish, Louisiana</td>
-      <td>661.0</td>
-      <td>638</td>
-      <td>31</td>
-      <td>580</td>
-      <td>2</td>
-      <td>2</td>
-      <td>0</td>
-      <td>23</td>
-      <td>...</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>351</th>
-      <td>7000000US2207117-18A</td>
-      <td>17-18A, Orleans Parish, Louisiana</td>
-      <td>1440.0</td>
-      <td>1251</td>
-      <td>954</td>
-      <td>147</td>
-      <td>2</td>
-      <td>88</td>
-      <td>0</td>
-      <td>60</td>
-      <td>...</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>352</th>
-      <td>7000000US22071ZZZZZZ</td>
-      <td>Voting Districts Not Defined, Orleans Parish, ...</td>
-      <td>0.0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>...</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-  </tbody>
-</table>
-<p>353 rows × 73 columns</p>
-</div></div>
-</div>
+<div class="section" id="Interactive-Mapping:-Income-and-Flooding">
+<h1>Interactive Mapping: Income and Flooding<a class="headerlink" href="#Interactive-Mapping:-Income-and-Flooding" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="Income-and-Flooding-Layered-Choropleth-Map">
+<h2>Income and Flooding Layered Choropleth Map<a class="headerlink" href="#Income-and-Flooding-Layered-Choropleth-Map" title="Permalink to this headline">¶</a></h2>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
@@ -740,6 +389,8 @@ div.rendered_html tbody tr:hover {
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span>
 </pre></div>
+</div>
+</div>
 </div>
 </div>
 

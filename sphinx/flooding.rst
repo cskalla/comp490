@@ -1,3 +1,5 @@
+
+
 Flooding and Environmental Disparity in New Orleans
 ===================================================
 
@@ -58,8 +60,640 @@ The Coast Guard was a beam of hope during the catastrophe for the New Orleans ci
 Mapping Levee Failure During Hurricane Katrina
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. raw:: html
-   :file: LeveeMap.html
-   
+    <html><head>
+
+
+    <!-- Load require.js. Delete this if your page already loads require.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@*/dist/embed-amd.js" crossorigin="anonymous"></script>
+    <script type="application/vnd.jupyter.widget-state+json">
+    {
+    "version_major": 2,
+    "version_minor": 0,
+    "state": {
+        "9c3965bfa794460ea729ade80d2123cd": {
+            "model_name": "LeafletPolylineModel",
+            "model_module": "jupyter-leaflet",
+            "model_module_version": "^0.14.0",
+            "state": {
+                "_model_module_version": "^0.14.0",
+                "_view_module_version": "^0.14.0",
+                "color": "green",
+                "draggable": false,
+                "fill": false,
+                "locations": [
+                    [
+                        [
+                            29.955529,
+                            -90.388598
+                        ],
+                        [
+                            29.984,
+                            -90.394092
+                        ],
+                        [
+                            29.999544,
+                            -90.427051
+                        ],
+                        [
+                            30.009447,
+                            -90.394214
+                        ],
+                        [
+                            29.988708,
+                            -90.370267
+                        ],
+                        [
+                            29.974066,
+                            -90.306878
+                        ],
+                        [
+                            29.9963685,
+                            -90.2855627
+                        ],
+                        [
+                            30.004895,
+                            -90.279379
+                        ],
+                        [
+                            30.052922,
+                            -90.280023
+                        ],
+                        [
+                            30.019091,
+                            -90.182326
+                        ],
+                        [
+                            30.031174,
+                            -90.037175
+                        ],
+                        [
+                            30.046881,
+                            -89.98693
+                        ],
+                        [
+                            30.075872,
+                            -89.939477
+                        ],
+                        [
+                            30.147105,
+                            -89.879463
+                        ],
+                        [
+                            30.075872,
+                            -89.852945
+                        ],
+                        [
+                            30.075872,
+                            -89.85434
+                        ],
+                        [
+                            30.045673,
+                            -89.827822
+                        ],
+                        [
+                            30.014257,
+                            -89.900398
+                        ],
+                        [
+                            29.991813,
+                            -89.908633
+                        ],
+                        [
+                            29.8859,
+                            -89.758945
+                        ],
+                        [
+                            29.854937,
+                            -89.778171
+                        ],
+                        [
+                            29.854937,
+                            -89.904513
+                        ]
+                    ],
+                    [
+                        [
+                            29.985271,
+                            -90.021822
+                        ],
+                        [
+                            29.94244,
+                            -89.910586
+                        ],
+                        [
+                            29.898401,
+                            -89.876254
+                        ],
+                        [
+                            29.880541,
+                            -89.876254
+                        ]
+                    ]
+                ],
+                "options": [
+                    "color",
+                    "dash_array",
+                    "draggable",
+                    "fill",
+                    "fill_color",
+                    "fill_opacity",
+                    "line_cap",
+                    "line_join",
+                    "no_clip",
+                    "opacity",
+                    "pointer_events",
+                    "smooth_factor",
+                    "stroke",
+                    "transform",
+                    "weight"
+                ],
+                "rotation": true,
+                "scaling": true,
+                "transform": false,
+                "uniform_scaling": false
+            }
+        },
+        "a57942b4dd934e62abfa7c8b0350ecd7": {
+            "model_name": "LeafletDrawControlModel",
+            "model_module": "jupyter-leaflet",
+            "model_module_version": "^0.14.0",
+            "state": {
+                "_model_module_version": "^0.14.0",
+                "_view_module_version": "^0.14.0",
+                "circle": {
+                    "shapeOptions": {
+                        "fillColor": "#efed69",
+                        "color": "#efed69",
+                        "fillOpacity": 1
+                    }
+                },
+                "circlemarker": {
+                    "shapeOptions": {}
+                },
+                "options": [
+                    "position"
+                ],
+                "polygon": {
+                    "shapeOptions": {
+                        "fillColor": "#6be5c3",
+                        "color": "#6be5c3",
+                        "fillOpacity": 1
+                    },
+                    "drawError": {
+                        "color": "#dd253b",
+                        "message": "Oups!"
+                    },
+                    "allowIntersection": false
+                },
+                "polyline": {
+                    "shapeOptions": {
+                        "color": "#6bc2e5",
+                        "weight": 8,
+                        "opacity": 1
+                    }
+                },
+                "rectangle": {
+                    "shapeOptions": {
+                        "fillColor": "#fca45d",
+                        "color": "#fca45d",
+                        "fillOpacity": 1
+                    }
+                }
+            }
+        },
+        "a0dd54ea082249b4af325343c9d63ff6": {
+            "model_name": "LeafletDivIconModel",
+            "model_module": "jupyter-leaflet",
+            "model_module_version": "^0.14.0",
+            "state": {
+                "_model_module_version": "^0.14.0",
+                "_view_module_version": "^0.14.0",
+                "html": "<img src=\"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F3%2F38%2FFEMA_-_37392_-_Repaired_17th_street_levee_in_New_Orleans_-_Katrina_Third_Year_Recovery.jpg%2F1280px-FEMA_-_37392_-_Repaired_17th_street_levee_in_New_Orleans_-_Katrina_Third_Year_Recovery.jpg&f=1&nofb=1\" alt=\"Simply Easy Learning\" width=\"180\" height=\"130\">Barb Sturner, FEMA Photo Library",
+                "icon_size": [
+                    180,
+                    130
+                ],
+                "options": [
+                    "bg_pos",
+                    "html",
+                    "icon_anchor",
+                    "icon_size",
+                    "popup_anchor"
+                ]
+            }
+        },
+        "97e50dd25c00438f8d0ea484ce4c2c2b": {
+            "model_name": "LeafletPolylineModel",
+            "model_module": "jupyter-leaflet",
+            "model_module_version": "^0.14.0",
+            "state": {
+                "_model_module_version": "^0.14.0",
+                "_view_module_version": "^0.14.0",
+                "color": "green",
+                "draggable": false,
+                "fill": false,
+                "locations": [
+                    [
+                        [
+                            29.955529,
+                            -90.388598
+                        ],
+                        [
+                            29.984,
+                            -90.394092
+                        ],
+                        [
+                            29.999544,
+                            -90.427051
+                        ],
+                        [
+                            30.009447,
+                            -90.394214
+                        ],
+                        [
+                            29.988708,
+                            -90.370267
+                        ],
+                        [
+                            29.974066,
+                            -90.306878
+                        ],
+                        [
+                            29.9963685,
+                            -90.2855627
+                        ],
+                        [
+                            30.004895,
+                            -90.279379
+                        ],
+                        [
+                            30.052922,
+                            -90.280023
+                        ],
+                        [
+                            30.019091,
+                            -90.182326
+                        ],
+                        [
+                            30.031174,
+                            -90.037175
+                        ],
+                        [
+                            30.046881,
+                            -89.98693
+                        ],
+                        [
+                            30.075872,
+                            -89.939477
+                        ],
+                        [
+                            30.147105,
+                            -89.879463
+                        ],
+                        [
+                            30.075872,
+                            -89.852945
+                        ],
+                        [
+                            30.075872,
+                            -89.85434
+                        ],
+                        [
+                            30.045673,
+                            -89.827822
+                        ],
+                        [
+                            30.014257,
+                            -89.900398
+                        ],
+                        [
+                            29.991813,
+                            -89.908633
+                        ],
+                        [
+                            29.8859,
+                            -89.758945
+                        ],
+                        [
+                            29.854937,
+                            -89.778171
+                        ],
+                        [
+                            29.854937,
+                            -89.904513
+                        ]
+                    ],
+                    [
+                        [
+                            29.985271,
+                            -90.021822
+                        ],
+                        [
+                            29.94244,
+                            -89.910586
+                        ],
+                        [
+                            29.898401,
+                            -89.876254
+                        ],
+                        [
+                            29.880541,
+                            -89.876254
+                        ]
+                    ]
+                ],
+                "options": [
+                    "color",
+                    "dash_array",
+                    "draggable",
+                    "fill",
+                    "fill_color",
+                    "fill_opacity",
+                    "line_cap",
+                    "line_join",
+                    "no_clip",
+                    "opacity",
+                    "pointer_events",
+                    "smooth_factor",
+                    "stroke",
+                    "transform",
+                    "weight"
+                ],
+                "rotation": true,
+                "scaling": true,
+                "transform": false,
+                "uniform_scaling": false
+            }
+        },
+        "380b440468104a9dad54697b2eac04d6": {
+            "model_name": "LeafletDrawControlModel",
+            "model_module": "jupyter-leaflet",
+            "model_module_version": "^0.14.0",
+            "state": {
+                "_model_module_version": "^0.14.0",
+                "_view_module_version": "^0.14.0",
+                "circle": {
+                    "shapeOptions": {
+                        "fillColor": "#efed69",
+                        "color": "#efed69",
+                        "fillOpacity": 1
+                    }
+                },
+                "circlemarker": {
+                    "shapeOptions": {}
+                },
+                "options": [
+                    "position"
+                ],
+                "polygon": {
+                    "shapeOptions": {
+                        "fillColor": "#6be5c3",
+                        "color": "#6be5c3",
+                        "fillOpacity": 1
+                    },
+                    "drawError": {
+                        "color": "#dd253b",
+                        "message": "Oups!"
+                    },
+                    "allowIntersection": false
+                },
+                "polyline": {
+                    "shapeOptions": {
+                        "color": "#6bc2e5",
+                        "weight": 8,
+                        "opacity": 1
+                    }
+                },
+                "rectangle": {
+                    "shapeOptions": {
+                        "fillColor": "#fca45d",
+                        "color": "#fca45d",
+                        "fillOpacity": 1
+                    }
+                }
+            }
+        },
+        "a749c2d615c24433a9daf33dcecf8063": {
+            "model_name": "LeafletDivIconModel",
+            "model_module": "jupyter-leaflet",
+            "model_module_version": "^0.14.0",
+            "state": {
+                "_model_module_version": "^0.14.0",
+                "_view_module_version": "^0.14.0",
+                "html": "<img src=\"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F3%2F38%2FFEMA_-_37392_-_Repaired_17th_street_levee_in_New_Orleans_-_Katrina_Third_Year_Recovery.jpg%2F1280px-FEMA_-_37392_-_Repaired_17th_street_levee_in_New_Orleans_-_Katrina_Third_Year_Recovery.jpg&f=1&nofb=1\" alt=\"Simply Easy Learning\" width=\"180\" height=\"130\">Barb Sturner, FEMA Photo Library",
+                "icon_size": [
+                    180,
+                    130
+                ],
+                "options": [
+                    "bg_pos",
+                    "html",
+                    "icon_anchor",
+                    "icon_size",
+                    "popup_anchor"
+                ]
+            }
+        },
+        "623ac962d9ab4da088dcf1998047b374": {
+            "model_name": "LeafletMarkerModel",
+            "model_module": "jupyter-leaflet",
+            "model_module_version": "^0.14.0",
+            "state": {
+                "_model_module_version": "^0.14.0",
+                "_view_module_version": "^0.14.0",
+                "icon": "IPY_MODEL_a749c2d615c24433a9daf33dcecf8063",
+                "location": [
+                    29.883185767133604,
+                    -90.26727063703224
+                ],
+                "options": [
+                    "alt",
+                    "draggable",
+                    "keyboard",
+                    "rise_offset",
+                    "rise_on_hover",
+                    "rotation_angle",
+                    "rotation_origin",
+                    "title",
+                    "z_index_offset"
+                ]
+            }
+        },
+        "51474b2a65ee4939bedd1e87675f41d1": {
+            "model_name": "LeafletMapStyleModel",
+            "model_module": "jupyter-leaflet",
+            "model_module_version": "^0.14.0",
+            "state": {
+                "_model_module_version": "^0.14.0"
+            }
+        },
+        "b856fda2474348c89462afc4fca2d873": {
+            "model_name": "LeafletMapStyleModel",
+            "model_module": "jupyter-leaflet",
+            "model_module_version": "^0.14.0",
+            "state": {
+                "_model_module_version": "^0.14.0",
+                "cursor": "move"
+            }
+        },
+        "1f54a7c338b147d5a2b6c7f5e78c8a92": {
+            "model_name": "LeafletTileLayerModel",
+            "model_module": "jupyter-leaflet",
+            "model_module_version": "^0.14.0",
+            "state": {
+                "_model_module_version": "^0.14.0",
+                "_view_module_version": "^0.14.0",
+                "base": true,
+                "max_native_zoom": 18,
+                "max_zoom": 19,
+                "min_native_zoom": 0,
+                "min_zoom": 1,
+                "options": [
+                    "attribution",
+                    "detect_retina",
+                    "max_native_zoom",
+                    "max_zoom",
+                    "min_native_zoom",
+                    "min_zoom",
+                    "no_wrap",
+                    "tile_size",
+                    "tms"
+                ]
+            }
+        },
+        "a63ea1ac0a8d42a4ae639d70196057ef": {
+            "model_name": "LayoutModel",
+            "model_module": "@jupyter-widgets/base",
+            "model_module_version": "1.2.0",
+            "state": {}
+        },
+        "7e3bc184a63144f1bafb1f0fb4fed0d6": {
+            "model_name": "LeafletMapStyleModel",
+            "model_module": "jupyter-leaflet",
+            "model_module_version": "^0.14.0",
+            "state": {
+                "_model_module_version": "^0.14.0"
+            }
+        },
+        "dd0b21b41bd24173ac558bd2c6cbd6ec": {
+            "model_name": "LeafletMapModel",
+            "model_module": "jupyter-leaflet",
+            "model_module_version": "^0.14.0",
+            "state": {
+                "_model_module_version": "^0.14.0",
+                "_view_module_version": "^0.14.0",
+                "bottom": 108395,
+                "center": [
+                    29.951065,
+                    -90.111533
+                ],
+                "controls": [
+                    "IPY_MODEL_e13085dca6674f949f22c9eb493c6705",
+                    "IPY_MODEL_0a4138bbd2b64e3a8537957e2de80808",
+                    "IPY_MODEL_380b440468104a9dad54697b2eac04d6"
+                ],
+                "default_style": "IPY_MODEL_51474b2a65ee4939bedd1e87675f41d1",
+                "dragging_style": "IPY_MODEL_b856fda2474348c89462afc4fca2d873",
+                "east": -89.43832397460939,
+                "fullscreen": false,
+                "interpolation": "bilinear",
+                "layers": [
+                    "IPY_MODEL_1f54a7c338b147d5a2b6c7f5e78c8a92",
+                    "IPY_MODEL_97e50dd25c00438f8d0ea484ce4c2c2b",
+                    "IPY_MODEL_623ac962d9ab4da088dcf1998047b374"
+                ],
+                "layout": "IPY_MODEL_a63ea1ac0a8d42a4ae639d70196057ef",
+                "left": 64964,
+                "modisdate": "yesterday",
+                "north": 30.18905718468536,
+                "options": [
+                    "bounce_at_zoom_limits",
+                    "box_zoom",
+                    "center",
+                    "close_popup_on_click",
+                    "double_click_zoom",
+                    "dragging",
+                    "fullscreen",
+                    "inertia",
+                    "inertia_deceleration",
+                    "inertia_max_speed",
+                    "interpolation",
+                    "keyboard",
+                    "keyboard_pan_offset",
+                    "keyboard_zoom_offset",
+                    "max_zoom",
+                    "min_zoom",
+                    "scroll_wheel_zoom",
+                    "tap",
+                    "tap_tolerance",
+                    "touch_zoom",
+                    "world_copy_jump",
+                    "zoom",
+                    "zoom_animation_threshold",
+                    "zoom_delta",
+                    "zoom_snap",
+                    "zoom_start"
+                ],
+                "right": 65945,
+                "south": 29.71310316634132,
+                "style": "IPY_MODEL_7e3bc184a63144f1bafb1f0fb4fed0d6",
+                "top": 107995,
+                "west": -90.7855224609375,
+                "window_url": "http://localhost:8888/notebooks/Documents/GitHub/comp490/Untitled.ipynb?kernel_name=python3",
+                "zoom": 10
+            }
+        },
+        "e13085dca6674f949f22c9eb493c6705": {
+            "model_name": "LeafletZoomControlModel",
+            "model_module": "jupyter-leaflet",
+            "model_module_version": "^0.14.0",
+            "state": {
+                "_model_module_version": "^0.14.0",
+                "_view_module_version": "^0.14.0",
+                "options": [
+                    "position",
+                    "zoom_in_text",
+                    "zoom_in_title",
+                    "zoom_out_text",
+                    "zoom_out_title"
+                ]
+            }
+        },
+        "0a4138bbd2b64e3a8537957e2de80808": {
+            "model_name": "LeafletAttributionControlModel",
+            "model_module": "jupyter-leaflet",
+            "model_module_version": "^0.14.0",
+            "state": {
+                "_model_module_version": "^0.14.0",
+                "_view_module_version": "^0.14.0",
+                "options": [
+                    "position",
+                    "prefix"
+                ],
+                "position": "bottomright",
+                "prefix": "ipyleaflet"
+            }
+        }
+    }
+    }
+    </script>
+    </head>
+    <body>
+
+    <script type="application/vnd.jupyter.widget-view+json">
+    {
+    "version_major": 2,
+    "version_minor": 0,
+    "model_id": "dd0b21b41bd24173ac558bd2c6cbd6ec"
+    }
+    </script>
+
+    </body>
+    </html>
+
+
+
 The Superdome
 ~~~~~~~~~~~~~~
 

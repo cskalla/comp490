@@ -1,13 +1,13 @@
 Interactive Mapping: Income and Flooding
-========================================
+==========================================
 
 Interactive Mapping: Income and Flooding
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Income and Flooding Layered Choropleth Map
 `````````````````````````````````````````
 .. raw:: html
-    :file: Income+Flooding.html
+    :file: ../_html_paths/Income+Flooding.html
 A map containing race and flooding data presented as layers on a choropleth map.
 
 

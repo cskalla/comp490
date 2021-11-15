@@ -1,0 +1,153 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {
+    "nbsphinx": "hidden"
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "<folium.map.Marker at 0x7fc21cce3e80>"
+      ]
+     },
+     "execution_count": 1,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "import os \n",
+    "import folium\n",
+    "from folium import plugins\n",
+    "\n",
+    "m = folium.Map(location=[29.951065, -90.071533])\n",
+    "\n",
+    "folium.Marker(\n",
+    "    location=[29.958443, -90.064411], # Caesers Superdome\n",
+    "    popup='Caesers Superdome<img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Louisiana_superdome_2004.jpg/1600px-Louisiana_superdome_2004.jpg\" alt=\"Caesers Superdome\" width=\"200\" height=\"100\">', # pop-up label for the marker\n",
+    "    icon=folium.Icon()\n",
+    ").add_to(m)\n",
+    "\n",
+    "folium.Marker(\n",
+    "    location=[29.951439, -90.081970], # French Quarter\n",
+    "    popup='French Quarter: Oldest neighborhood in New Orleans.<img src=\"https://upload.wikimedia.org/wikipedia/commons/b/b2/French_Quarter_example_of_late_18th-century_Spanish_architecture_built_after_the_Great_Fires_of_1788_and_1794.jpg\" alt=\"French Quarter\" width=\"200\" height=\"100\">', # pop-up label for the marker\n",
+    "    icon=folium.Icon()\n",
+    ").add_to(m)\n",
+    "\n",
+    "folium.Marker(\n",
+    "    location=[29.940782, -90.096977], # Clairborne\n",
+    "    popup='Claiborne Avenue in the Tremé<img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Orleans_Clairborne_Down_River_Corner_New_Orleans_July_2018.jpg/1599px-Orleans_Clairborne_Down_River_Corner_New_Orleans_July_2018.jpg\" alt=\"Clairborne\" width=\"200\" height=\"100\">', # pop-up label for the marker\n",
+    "    icon=folium.Icon()\n",
+    ").add_to(m)\n",
+    "\n",
+    "folium.Marker(\n",
+    "    location=[29.9292, -90.0829], # Preservation Hall\n",
+    "    popup='Garden District: Where the city’s original aristocratic class settled.<img src=\"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Flive.staticflickr.com%2F65535%2F48735050087_b8d5debaf7_b.jpg&f=1&nofb=1\" alt=\"Garden District\" width=\"200\" height=\"100\">',\n",
+    "    icon=folium.Icon()\n",
+    ").add_to(m)\n",
+    "\n",
+    "folium.Marker(\n",
+    "    location=[29.9426, -89.9909], # Chalmette Battlefield\n",
+    "    popup='Chalmette Battlefield: Commemorates two significant wars in American history.<img src=\"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Flive.staticflickr.com%2F4013%2F4603809584_c2a354daca_b.jpg&f=1&nofb=1\" alt=\"Chalmette Battlefield\" width=\"200\" height=\"100\">', # pop-up label for the marker\n",
+    "    icon=folium.Icon()\n",
+    ").add_to(m)\n",
+    "\n",
+    "folium.Marker(\n",
+    "    location=[29.9580, -90.0637], # Chalmette Battlefield\n",
+    "    popup='St Louis Cathedral: Oldest continuously active cathedral in the United States.<img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Cathedral_Basilica_of_Saint_Louis_%28St._Louis%2C_MO%29_-_exterior%2C_quarter_view_2.jpg/1365px-Cathedral_Basilica_of_Saint_Louis_%28St._Louis%2C_MO%29_-_exterior%2C_quarter_view_2.jpg\" alt=\"Cathedral\" width=\"200\" height=\"100\">', # pop-up label for the marker\n",
+    "    icon=folium.Icon()\n",
+    ").add_to(m)\n",
+    "\n",
+    "folium.Marker(\n",
+    "    location=[29.9288, -90.0854], # Preservation Hall\n",
+    "    popup='Lafayette Cemetary: Above ground monument tombs that reflect the European/Caribbean traditions of New Orleans ancestors.<img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Lafayette_Cemetery_No_1.jpg/1600px-Lafayette_Cemetery_No_1.jpg\" alt=\"Cemetary\" width=\"200\" height=\"100\">',\n",
+    "    icon=folium.Icon()\n",
+    ").add_to(m)\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# The People of New Orleans"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "The land that New Orleans rests on was initially the home of the Indiginous peoples of the Woodland and Mississippian cultures (History.com Editors, 2010). In 1718, the city of Nouvelle-Orléans was founded by Jean-Baptiste Le Moyne under French rule. In 1762-1763, Louisiana was transferred to Spain. In 1800, Louisiana was passed back to France, who then sold it to the United States in 1803 (Neworleans.com). Throughout this period of time when New Orleans was passing hands, black enslaved individuals were behind the true growth of the city and surrounding area. The kidnapping of African people increased as plantations were created in the area. Under Spanish rule in particular, the rules for enslaved individuals relaxed to a certain degree resulting in a day of rest on Sundays, gathering in the Congo Square to preserve some of their original culture, and the opportunity to buy their way to freedom. Some of this ability to hold on to culture transformed into jazz music, much of which the people and city of New Orleans is known for (United Teachers of New Orleans, 2021). Some of the various historical locations and features of New Orleans are depicted in the Pop-Up Map below.\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Historical Map of New Orleans"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "<div style=\"width:100%;\"><div style=\"position:relative;width:100%;height:0;padding-bottom:60%;\"><span style=\"color:#565656\">Make this Notebook Trusted to load map: File -> Trust Notebook</span><iframe src=\"about:blank\" style=\"position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;\" data-html=%3C%21DOCTYPE%20html%3E%0A%3Chead%3E%20%20%20%20%0A%20%20%20%20%3Cmeta%20http-equiv%3D%22content-type%22%20content%3D%22text/html%3B%20charset%3DUTF-8%22%20/%3E%0A%20%20%20%20%0A%20%20%20%20%20%20%20%20%3Cscript%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20L_NO_TOUCH%20%3D%20false%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20L_DISABLE_3D%20%3D%20false%3B%0A%20%20%20%20%20%20%20%20%3C/script%3E%0A%20%20%20%20%0A%20%20%20%20%3Cstyle%3Ehtml%2C%20body%20%7Bwidth%3A%20100%25%3Bheight%3A%20100%25%3Bmargin%3A%200%3Bpadding%3A%200%3B%7D%3C/style%3E%0A%20%20%20%20%3Cstyle%3E%23map%20%7Bposition%3Aabsolute%3Btop%3A0%3Bbottom%3A0%3Bright%3A0%3Bleft%3A0%3B%7D%3C/style%3E%0A%20%20%20%20%3Cscript%20src%3D%22https%3A//cdn.jsdelivr.net/npm/leaflet%401.6.0/dist/leaflet.js%22%3E%3C/script%3E%0A%20%20%20%20%3Cscript%20src%3D%22https%3A//code.jquery.com/jquery-1.12.4.min.js%22%3E%3C/script%3E%0A%20%20%20%20%3Cscript%20src%3D%22https%3A//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js%22%3E%3C/script%3E%0A%20%20%20%20%3Cscript%20src%3D%22https%3A//cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js%22%3E%3C/script%3E%0A%20%20%20%20%3Clink%20rel%3D%22stylesheet%22%20href%3D%22https%3A//cdn.jsdelivr.net/npm/leaflet%401.6.0/dist/leaflet.css%22/%3E%0A%20%20%20%20%3Clink%20rel%3D%22stylesheet%22%20href%3D%22https%3A//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css%22/%3E%0A%20%20%20%20%3Clink%20rel%3D%22stylesheet%22%20href%3D%22https%3A//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css%22/%3E%0A%20%20%20%20%3Clink%20rel%3D%22stylesheet%22%20href%3D%22https%3A//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css%22/%3E%0A%20%20%20%20%3Clink%20rel%3D%22stylesheet%22%20href%3D%22https%3A//cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css%22/%3E%0A%20%20%20%20%3Clink%20rel%3D%22stylesheet%22%20href%3D%22https%3A//cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css%22/%3E%0A%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cmeta%20name%3D%22viewport%22%20content%3D%22width%3Ddevice-width%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20initial-scale%3D1.0%2C%20maximum-scale%3D1.0%2C%20user-scalable%3Dno%22%20/%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%23map_407c2a997794482a9a33ae4098ec68db%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20position%3A%20relative%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20width%3A%20100.0%25%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20height%3A%20100.0%25%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20left%3A%200.0%25%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20top%3A%200.0%25%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%20%20%0A%3C/head%3E%0A%3Cbody%3E%20%20%20%20%0A%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22folium-map%22%20id%3D%22map_407c2a997794482a9a33ae4098ec68db%22%20%3E%3C/div%3E%0A%20%20%20%20%20%20%20%20%0A%3C/body%3E%0A%3Cscript%3E%20%20%20%20%0A%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20var%20map_407c2a997794482a9a33ae4098ec68db%20%3D%20L.map%28%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22map_407c2a997794482a9a33ae4098ec68db%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20center%3A%20%5B29.951065%2C%20-90.071533%5D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20crs%3A%20L.CRS.EPSG3857%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20zoom%3A%2010%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20zoomControl%3A%20true%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20preferCanvas%3A%20false%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%29%3B%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%0A%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20var%20tile_layer_414c7c203ea8453c8e618aa26316d258%20%3D%20L.tileLayer%28%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22https%3A//%7Bs%7D.tile.openstreetmap.org/%7Bz%7D/%7Bx%7D/%7By%7D.png%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7B%22attribution%22%3A%20%22Data%20by%20%5Cu0026copy%3B%20%5Cu003ca%20href%3D%5C%22http%3A//openstreetmap.org%5C%22%5Cu003eOpenStreetMap%5Cu003c/a%5Cu003e%2C%20under%20%5Cu003ca%20href%3D%5C%22http%3A//www.openstreetmap.org/copyright%5C%22%5Cu003eODbL%5Cu003c/a%5Cu003e.%22%2C%20%22detectRetina%22%3A%20false%2C%20%22maxNativeZoom%22%3A%2018%2C%20%22maxZoom%22%3A%2018%2C%20%22minZoom%22%3A%200%2C%20%22noWrap%22%3A%20false%2C%20%22opacity%22%3A%201%2C%20%22subdomains%22%3A%20%22abc%22%2C%20%22tms%22%3A%20false%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%29.addTo%28map_407c2a997794482a9a33ae4098ec68db%29%3B%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20var%20marker_6f1f551b75fb4c91bf786a5f18b02a6c%20%3D%20L.marker%28%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%5B29.958443%2C%20-90.064411%5D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7B%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%29.addTo%28map_407c2a997794482a9a33ae4098ec68db%29%3B%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20var%20icon_c183faae20f64313af707cb4bb4a3d62%20%3D%20L.AwesomeMarkers.icon%28%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7B%22extraClasses%22%3A%20%22fa-rotate-0%22%2C%20%22icon%22%3A%20%22info-sign%22%2C%20%22iconColor%22%3A%20%22white%22%2C%20%22markerColor%22%3A%20%22blue%22%2C%20%22prefix%22%3A%20%22glyphicon%22%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20marker_6f1f551b75fb4c91bf786a5f18b02a6c.setIcon%28icon_c183faae20f64313af707cb4bb4a3d62%29%3B%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%0A%20%20%20%20%20%20%20%20var%20popup_3f7846bdce3a4d9facab43e84b7ef056%20%3D%20L.popup%28%7B%22maxWidth%22%3A%20%22100%25%22%7D%29%3B%0A%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20var%20html_6370e4b4f5244ffe8829c05181deac32%20%3D%20%24%28%60%3Cdiv%20id%3D%22html_6370e4b4f5244ffe8829c05181deac32%22%20style%3D%22width%3A%20100.0%25%3B%20height%3A%20100.0%25%3B%22%3ECaesers%20Superdome%3Cimg%20src%3D%22https%3A//upload.wikimedia.org/wikipedia/commons/thumb/5/57/Louisiana_superdome_2004.jpg/1600px-Louisiana_superdome_2004.jpg%22%20alt%3D%22Caesers%20Superdome%22%20width%3D%22200%22%20height%3D%22100%22%3E%3C/div%3E%60%29%5B0%5D%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20popup_3f7846bdce3a4d9facab43e84b7ef056.setContent%28html_6370e4b4f5244ffe8829c05181deac32%29%3B%0A%20%20%20%20%20%20%20%20%0A%0A%20%20%20%20%20%20%20%20marker_6f1f551b75fb4c91bf786a5f18b02a6c.bindPopup%28popup_3f7846bdce3a4d9facab43e84b7ef056%29%0A%20%20%20%20%20%20%20%20%3B%0A%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%0A%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20var%20marker_7a6b6444d9704c9cb8672e030425c4e9%20%3D%20L.marker%28%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%5B29.951439%2C%20-90.08197%5D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7B%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%29.addTo%28map_407c2a997794482a9a33ae4098ec68db%29%3B%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20var%20icon_e10a6452908e49cb9b67c95106b1c126%20%3D%20L.AwesomeMarkers.icon%28%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7B%22extraClasses%22%3A%20%22fa-rotate-0%22%2C%20%22icon%22%3A%20%22info-sign%22%2C%20%22iconColor%22%3A%20%22white%22%2C%20%22markerColor%22%3A%20%22blue%22%2C%20%22prefix%22%3A%20%22glyphicon%22%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20marker_7a6b6444d9704c9cb8672e030425c4e9.setIcon%28icon_e10a6452908e49cb9b67c95106b1c126%29%3B%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%0A%20%20%20%20%20%20%20%20var%20popup_b2cbf1db6dc94c70b572ccc751450f1a%20%3D%20L.popup%28%7B%22maxWidth%22%3A%20%22100%25%22%7D%29%3B%0A%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20var%20html_eb80f20275ac426593c5a91f284edca2%20%3D%20%24%28%60%3Cdiv%20id%3D%22html_eb80f20275ac426593c5a91f284edca2%22%20style%3D%22width%3A%20100.0%25%3B%20height%3A%20100.0%25%3B%22%3EFrench%20Quarter%3A%20Oldest%20neighborhood%20in%20New%20Orleans.%3Cimg%20src%3D%22https%3A//upload.wikimedia.org/wikipedia/commons/b/b2/French_Quarter_example_of_late_18th-century_Spanish_architecture_built_after_the_Great_Fires_of_1788_and_1794.jpg%22%20alt%3D%22French%20Quarter%22%20width%3D%22200%22%20height%3D%22100%22%3E%3C/div%3E%60%29%5B0%5D%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20popup_b2cbf1db6dc94c70b572ccc751450f1a.setContent%28html_eb80f20275ac426593c5a91f284edca2%29%3B%0A%20%20%20%20%20%20%20%20%0A%0A%20%20%20%20%20%20%20%20marker_7a6b6444d9704c9cb8672e030425c4e9.bindPopup%28popup_b2cbf1db6dc94c70b572ccc751450f1a%29%0A%20%20%20%20%20%20%20%20%3B%0A%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%0A%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20var%20marker_8647a527dff542caaf8d5c8167078aa3%20%3D%20L.marker%28%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%5B29.940782%2C%20-90.096977%5D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7B%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%29.addTo%28map_407c2a997794482a9a33ae4098ec68db%29%3B%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20var%20icon_5eae765baa8c4304a64c433b9d7cc6fe%20%3D%20L.AwesomeMarkers.icon%28%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7B%22extraClasses%22%3A%20%22fa-rotate-0%22%2C%20%22icon%22%3A%20%22info-sign%22%2C%20%22iconColor%22%3A%20%22white%22%2C%20%22markerColor%22%3A%20%22blue%22%2C%20%22prefix%22%3A%20%22glyphicon%22%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20marker_8647a527dff542caaf8d5c8167078aa3.setIcon%28icon_5eae765baa8c4304a64c433b9d7cc6fe%29%3B%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%0A%20%20%20%20%20%20%20%20var%20popup_fe121abdf97d4ceb977dee5b31f8a70e%20%3D%20L.popup%28%7B%22maxWidth%22%3A%20%22100%25%22%7D%29%3B%0A%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20var%20html_289c958c90494596ab786d4151c72a0f%20%3D%20%24%28%60%3Cdiv%20id%3D%22html_289c958c90494596ab786d4151c72a0f%22%20style%3D%22width%3A%20100.0%25%3B%20height%3A%20100.0%25%3B%22%3EClaiborne%20Avenue%20in%20the%20Trem%C3%A9%3Cimg%20src%3D%22https%3A//upload.wikimedia.org/wikipedia/commons/thumb/2/26/Orleans_Clairborne_Down_River_Corner_New_Orleans_July_2018.jpg/1599px-Orleans_Clairborne_Down_River_Corner_New_Orleans_July_2018.jpg%22%20alt%3D%22Clairborne%22%20width%3D%22200%22%20height%3D%22100%22%3E%3C/div%3E%60%29%5B0%5D%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20popup_fe121abdf97d4ceb977dee5b31f8a70e.setContent%28html_289c958c90494596ab786d4151c72a0f%29%3B%0A%20%20%20%20%20%20%20%20%0A%0A%20%20%20%20%20%20%20%20marker_8647a527dff542caaf8d5c8167078aa3.bindPopup%28popup_fe121abdf97d4ceb977dee5b31f8a70e%29%0A%20%20%20%20%20%20%20%20%3B%0A%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%0A%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20var%20marker_b8561f64d05649fb9e59b9d9acb45f62%20%3D%20L.marker%28%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%5B29.9292%2C%20-90.0829%5D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7B%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%29.addTo%28map_407c2a997794482a9a33ae4098ec68db%29%3B%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20var%20icon_1e8e82b63a754839815fdee9eb070c20%20%3D%20L.AwesomeMarkers.icon%28%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7B%22extraClasses%22%3A%20%22fa-rotate-0%22%2C%20%22icon%22%3A%20%22info-sign%22%2C%20%22iconColor%22%3A%20%22white%22%2C%20%22markerColor%22%3A%20%22blue%22%2C%20%22prefix%22%3A%20%22glyphicon%22%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20marker_b8561f64d05649fb9e59b9d9acb45f62.setIcon%28icon_1e8e82b63a754839815fdee9eb070c20%29%3B%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%0A%20%20%20%20%20%20%20%20var%20popup_4c8154dc33184c85a8784e8e68ce789d%20%3D%20L.popup%28%7B%22maxWidth%22%3A%20%22100%25%22%7D%29%3B%0A%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20var%20html_3d833273cbe24ae7b49393219a6c7bb7%20%3D%20%24%28%60%3Cdiv%20id%3D%22html_3d833273cbe24ae7b49393219a6c7bb7%22%20style%3D%22width%3A%20100.0%25%3B%20height%3A%20100.0%25%3B%22%3EGarden%20District%3A%20Where%20the%20city%E2%80%99s%20original%20aristocratic%20class%20settled.%3Cimg%20src%3D%22https%3A//external-content.duckduckgo.com/iu/%3Fu%3Dhttps%253A%252F%252Flive.staticflickr.com%252F65535%252F48735050087_b8d5debaf7_b.jpg%26f%3D1%26nofb%3D1%22%20alt%3D%22Garden%20District%22%20width%3D%22200%22%20height%3D%22100%22%3E%3C/div%3E%60%29%5B0%5D%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20popup_4c8154dc33184c85a8784e8e68ce789d.setContent%28html_3d833273cbe24ae7b49393219a6c7bb7%29%3B%0A%20%20%20%20%20%20%20%20%0A%0A%20%20%20%20%20%20%20%20marker_b8561f64d05649fb9e59b9d9acb45f62.bindPopup%28popup_4c8154dc33184c85a8784e8e68ce789d%29%0A%20%20%20%20%20%20%20%20%3B%0A%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%0A%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20var%20marker_ffe453893afd499190029a685e5ee8e8%20%3D%20L.marker%28%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%5B29.9426%2C%20-89.9909%5D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7B%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%29.addTo%28map_407c2a997794482a9a33ae4098ec68db%29%3B%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20var%20icon_94524022ec9140ffac3da98fe04b5cef%20%3D%20L.AwesomeMarkers.icon%28%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7B%22extraClasses%22%3A%20%22fa-rotate-0%22%2C%20%22icon%22%3A%20%22info-sign%22%2C%20%22iconColor%22%3A%20%22white%22%2C%20%22markerColor%22%3A%20%22blue%22%2C%20%22prefix%22%3A%20%22glyphicon%22%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20marker_ffe453893afd499190029a685e5ee8e8.setIcon%28icon_94524022ec9140ffac3da98fe04b5cef%29%3B%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%0A%20%20%20%20%20%20%20%20var%20popup_39191d21c98a4733b3b3ff5ae2ab427c%20%3D%20L.popup%28%7B%22maxWidth%22%3A%20%22100%25%22%7D%29%3B%0A%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20var%20html_c2626ea40e784f5e954b29d96b88280c%20%3D%20%24%28%60%3Cdiv%20id%3D%22html_c2626ea40e784f5e954b29d96b88280c%22%20style%3D%22width%3A%20100.0%25%3B%20height%3A%20100.0%25%3B%22%3EChalmette%20Battlefield%3A%20Commemorates%20two%20significant%20wars%20in%20American%20history.%3Cimg%20src%3D%22https%3A//external-content.duckduckgo.com/iu/%3Fu%3Dhttps%253A%252F%252Flive.staticflickr.com%252F4013%252F4603809584_c2a354daca_b.jpg%26f%3D1%26nofb%3D1%22%20alt%3D%22Chalmette%20Battlefield%22%20width%3D%22200%22%20height%3D%22100%22%3E%3C/div%3E%60%29%5B0%5D%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20popup_39191d21c98a4733b3b3ff5ae2ab427c.setContent%28html_c2626ea40e784f5e954b29d96b88280c%29%3B%0A%20%20%20%20%20%20%20%20%0A%0A%20%20%20%20%20%20%20%20marker_ffe453893afd499190029a685e5ee8e8.bindPopup%28popup_39191d21c98a4733b3b3ff5ae2ab427c%29%0A%20%20%20%20%20%20%20%20%3B%0A%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%0A%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20var%20marker_03619179ea41475f945253958c8f5434%20%3D%20L.marker%28%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%5B29.958%2C%20-90.0637%5D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7B%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%29.addTo%28map_407c2a997794482a9a33ae4098ec68db%29%3B%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20var%20icon_c668948070604a9ea96689cf70ed2784%20%3D%20L.AwesomeMarkers.icon%28%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7B%22extraClasses%22%3A%20%22fa-rotate-0%22%2C%20%22icon%22%3A%20%22info-sign%22%2C%20%22iconColor%22%3A%20%22white%22%2C%20%22markerColor%22%3A%20%22blue%22%2C%20%22prefix%22%3A%20%22glyphicon%22%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20marker_03619179ea41475f945253958c8f5434.setIcon%28icon_c668948070604a9ea96689cf70ed2784%29%3B%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%0A%20%20%20%20%20%20%20%20var%20popup_585ab578e3a54ab78dc6f5d08f2157a1%20%3D%20L.popup%28%7B%22maxWidth%22%3A%20%22100%25%22%7D%29%3B%0A%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20var%20html_509628849d58462d85d7fb72fba730e0%20%3D%20%24%28%60%3Cdiv%20id%3D%22html_509628849d58462d85d7fb72fba730e0%22%20style%3D%22width%3A%20100.0%25%3B%20height%3A%20100.0%25%3B%22%3ESt%20Louis%20Cathedral%3A%20Oldest%20continuously%20active%20cathedral%20in%20the%20United%20States.%3Cimg%20src%3D%22https%3A//upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Cathedral_Basilica_of_Saint_Louis_%2528St._Louis%252C_MO%2529_-_exterior%252C_quarter_view_2.jpg/1365px-Cathedral_Basilica_of_Saint_Louis_%2528St._Louis%252C_MO%2529_-_exterior%252C_quarter_view_2.jpg%22%20alt%3D%22Cathedral%22%20width%3D%22200%22%20height%3D%22100%22%3E%3C/div%3E%60%29%5B0%5D%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20popup_585ab578e3a54ab78dc6f5d08f2157a1.setContent%28html_509628849d58462d85d7fb72fba730e0%29%3B%0A%20%20%20%20%20%20%20%20%0A%0A%20%20%20%20%20%20%20%20marker_03619179ea41475f945253958c8f5434.bindPopup%28popup_585ab578e3a54ab78dc6f5d08f2157a1%29%0A%20%20%20%20%20%20%20%20%3B%0A%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%0A%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20var%20marker_6a09cb82ac9d4957ac2651577c5bc2ea%20%3D%20L.marker%28%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%5B29.9288%2C%20-90.0854%5D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7B%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%29.addTo%28map_407c2a997794482a9a33ae4098ec68db%29%3B%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20var%20icon_f1bd22470509413fbe7c4db333bb554f%20%3D%20L.AwesomeMarkers.icon%28%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7B%22extraClasses%22%3A%20%22fa-rotate-0%22%2C%20%22icon%22%3A%20%22info-sign%22%2C%20%22iconColor%22%3A%20%22white%22%2C%20%22markerColor%22%3A%20%22blue%22%2C%20%22prefix%22%3A%20%22glyphicon%22%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20marker_6a09cb82ac9d4957ac2651577c5bc2ea.setIcon%28icon_f1bd22470509413fbe7c4db333bb554f%29%3B%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%0A%20%20%20%20%20%20%20%20var%20popup_12ef7ad41a194f729478d20c39f0ec62%20%3D%20L.popup%28%7B%22maxWidth%22%3A%20%22100%25%22%7D%29%3B%0A%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20var%20html_98d32d6660d246b1b04c7b463f609dca%20%3D%20%24%28%60%3Cdiv%20id%3D%22html_98d32d6660d246b1b04c7b463f609dca%22%20style%3D%22width%3A%20100.0%25%3B%20height%3A%20100.0%25%3B%22%3ELafayette%20Cemetary%3A%20Above%20ground%20monument%20tombs%20that%20reflect%20the%20European/Caribbean%20traditions%20of%20New%20Orleans%20ancestors.%3Cimg%20src%3D%22https%3A//upload.wikimedia.org/wikipedia/commons/thumb/6/69/Lafayette_Cemetery_No_1.jpg/1600px-Lafayette_Cemetery_No_1.jpg%22%20alt%3D%22Cemetary%22%20width%3D%22200%22%20height%3D%22100%22%3E%3C/div%3E%60%29%5B0%5D%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20popup_12ef7ad41a194f729478d20c39f0ec62.setContent%28html_98d32d6660d246b1b04c7b463f609dca%29%3B%0A%20%20%20%20%20%20%20%20%0A%0A%20%20%20%20%20%20%20%20marker_6a09cb82ac9d4957ac2651577c5bc2ea.bindPopup%28popup_12ef7ad41a194f729478d20c39f0ec62%29%0A%20%20%20%20%20%20%20%20%3B%0A%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%0A%3C/script%3E onload=\"this.contentDocument.open();this.contentDocument.write(    decodeURIComponent(this.getAttribute('data-html')));this.contentDocument.close();\" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div></div>"
+      ],
+      "text/plain": [
+       "<folium.folium.Map at 0x7fc21ac8be20>"
+      ]
+     },
+     "execution_count": 2,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "m"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "celltoolbar": "Edit Metadata",
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.8.5"
+  },
+  "widgets": {
+   "application/vnd.jupyter.widget-state+json": {
+    "state": {},
+    "version_major": 2,
+    "version_minor": 0
+   }
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 4
+}
