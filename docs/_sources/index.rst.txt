@@ -32,26 +32,9 @@ This Project was created for the course Computing for Environmental Science at K
 
        :link-badge:`https://www.cs.kzoo.edu/cs490/schedule.html,"Comp490 Website",cls=badge-orange text-white`
        ++++++++++++++
-       Authors:
+       Authors: Caroline, Faith, Vien, Eleanor, and Kate
 
-       ---
 
-       Site contents
-       ^^^^^^^^^^^^^^
-
-       :ref:`The People of New Orleans`
-
-       :ref:`Flooding and Environmental Disparity in New Orleans`
-
-       :ref:`Interactive Mapping: Income and Flooding`
-
-       :ref:`Climate Change`
-
-       :ref:`A Conclusion`
-
-       :ref:`Technology Used`
-
-       :ref:`Bibliography`
 
 
 
